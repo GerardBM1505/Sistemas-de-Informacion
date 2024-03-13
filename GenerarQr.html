@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Código QR</title>
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+            integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="generadorQr.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body class="container indigo lighten-5">
+    <div>
+        <h1 class="center-align">Generador de Qr</h1>
+      </div>
+    
+    <div id="contenedorQr">
+        <form id="formulario">
+            <input type="text" id="Nombre" placeholder="Nombre(s)">
+            <input type="text" id="Apellido" placeholder="Apellidos">
+            <input type="text" id="NumeroCuenta" placeholder="Número de cuenta">
+            <label for="Carrera">Selecciona tu carrera:</label>
+            <div class="input-field col s12">
+            <select class="browser-default" id="Carrera">
+                <option value="ICO">ICO</option>
+                <option value="IEE">IEE</option>
+                <option value="Arquitectura">Arquitectura</option>
+                <option value="Derecho">Derecho</option>
+            </select>
+
+            <button class="btn indigo darken-2" type="button" onclick="generarQR()">Generar QR</button>
+        </form>
+    </div>
+    <div align="center" id="qrCode"></div>
+
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+</html>
